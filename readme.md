@@ -1,4 +1,6 @@
-﻿![](https://javascript30.com/images/JS3-social-share.png)
+[![wakatime](https://wakatime.com/badge/github/javrr-ui/JavaScript30.svg)](https://wakatime.com/badge/github/javrr-ui/JavaScript30)
+
+![](https://javascript30.com/images/JS3-social-share.png)
 
 # JavaScript30
 
