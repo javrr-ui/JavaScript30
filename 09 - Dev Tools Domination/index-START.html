@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Console Tricks!</title>
 </head>
+
 <body>
 
   <p onClick="makeGreen()">×BREAK×DOWN×</p>
@@ -18,29 +20,48 @@
     }
 
     // Regular
-
+    console.log("hello");
     // Interpolated
-
+    console.log("Hello I am a %s String!", "💩");
     // Styled
-
+    console.log("%c I am some great text", "font-size:20px");
     // warning!
-
+    console.warn("F");
     // Error :|
-
+    console.error("Error");
     // Info
-
+    console.info("info");
     // Testing
-
+    console.assert(1 === 2, "that's Wrong!");
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
-
+    console.dir(document.querySelector("p"));
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
+    })
     // counting
-
+    console.count("hi");
+    console.count("hi");
+    console.count("hi");
+    console.count("hello");
+    console.count("hi");
+    console.count("hello");
+    console.count("hello");
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
 
+    console.table(dogs);
   </script>
 </body>
 </html>
