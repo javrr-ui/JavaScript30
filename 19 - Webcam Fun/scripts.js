@@ -31,3 +31,20 @@ function paintToCanvas(){
         ctx.drawImage(video,0,0,width, height);
     },16)
 }
+
+function takePhoto() {
+    snap.currentTime = 0;
+    snap.play();
+
+
+    //Take the data out of the canvas
+    const data = canvas.toDataURL("image/jpeg");
+    const link = document.createElement("a");
+    link.href = data;
+    link.setAttribute("download", "XD")
+    link.innerHTML =  `<img src="${data}" />`;
+    strip.insertBefore(link, strip.firstChild);
+}
+
+
+video.addEventListener("canplay",paintToCanvas);
