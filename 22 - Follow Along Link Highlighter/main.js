@@ -12,5 +12,9 @@ triggers.forEach(a=>{
 
 
 function highlightLink(){
-    console.log("Highlight!!")
+    const linkCoords = this.getBoundingClientRect();
+    console.log(linkCoords);
+
+    highlight.style.width = `${linkCoords.width}px`;
+    highlight.style.height = `${linkCoords.height}px`;
 }
